@@ -1,3 +1,11 @@
+<?php
+
+	require 'connect_database.php';
+	$sql = "select * from slider";
+	$sliders=$conn->query($sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,14 +110,18 @@
 			  </thead>
 			  <tbody>
 
+					<?php foreach ($sliders as $key => $value) { ?>
+
 			    <tr>
-			      <th scope="row"></th>
-			      <td></td>
-			      <td></td>
-			      <td></td>
-				  <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"  class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
-				  <td><button id="delete" class="btn btn-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></button></td>
+			      <th scope="row"> <?php echo $value['id']  ?> </th>
+			      <td> <?php echo $value['title']  ?> </td>
+			      <td> <?php echo $value['description']  ?> </td>
+			      <td> <img src="../course_site/images/slider/<?php echo $value['img']  ?>"  width="70" height="70" alt="">  </td>
+				  	<td><button id="edit-btn"   type="button"class="btn btn-info" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"  class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+				  	<td><button id="delete-btn" type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteslider" ><i class="fa fa-times-circle" aria-hidden="true"></i></button></td>
 			    </tr>
+
+				<?php } ?>
 
 			</table>
 		</div>
