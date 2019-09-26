@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +33,7 @@
 					<div class="form-group">
 						<input type="submit" id="login" class="form-control btn btn-info" value="Login Now">
 					</div>
+					<div id="login_error"> </div>
 
 				</form>
 			</div>
@@ -55,9 +55,9 @@
 					data: {username: name , password: password },
 					success: function(data){
 						if(data==="success"){
-							alert("log in");
+							window.location.assign("control.php");
 						}else{
-							alert("try again");
+							$('#login_error').html(data);
 						}
 					}
 				}
