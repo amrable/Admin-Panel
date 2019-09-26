@@ -203,6 +203,29 @@
 		$('#delete_id').val(id);
 	});
 
+	$(document).on('click','#deleteSlider',function(e){
+		var data = new FormData(document.getElementById('deleteform'));
+		$.ajax({
+			url:"sliders/delete.php",
+			type:"POST",
+			data:data,
+			async: false,
+			processData: false,
+			contentType: false,
+		}).done(
+			function(data){
+				console.log(data);
+				if(data==="success"){
+
+					window.location.reload();
+
+				}else{
+					alert("Error has happened");
+				}
+			}
+		)
+	});
+
 
 
 
