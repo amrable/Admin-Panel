@@ -96,6 +96,38 @@
 		</div>
 		<!-- end modal edit -->
 
+
+		<!-- model Delete  -->
+		<div class="form col-lg-10 col-md-offset-2 ">
+			<div class="modal fade" id="deleteslider" tabindex="-1" role="dialog" aria-labelledby="DeleteLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h1 class="modal-title" id="DeleteLabel">Delete Slider</h1>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <form id="deleteform" action="php_site/generl_input.php" method="POST" enctype="multipart/form-data">
+			          <div class="form-group">
+			            <input type="hidden" id="delete_id" name="delete_id">
+			          </div>
+			          <div class="form-group">
+								    <h5>Are you sure of deleteing this slider?</h5>
+			          </div>
+			        </form>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			        <button id="deleteSlider" type="submit" class="btn btn-primary"> Delete  </button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+		<!-- end modal Delete -->
+
 		<div class="col-lg-10 col-md-offset-2">
 			<table class="table ">
 			  <thead>
@@ -118,7 +150,7 @@
 			      <td> <?php echo $value['description']  ?> </td>
 			      <td> <img src="../course_site/images/slider/<?php echo $value['img']  ?>"  width="70" height="70" alt="">  </td>
 				  	<td><button id="edit-btn"   type="button"class="btn btn-info" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"  class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
-				  	<td><button id="delete-btn" type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteslider" ><i class="fa fa-times-circle" aria-hidden="true"></i></button></td>
+				  	<td><button id="delete-btn" data-id="<?php echo $value['id']; ?>" type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteslider" ><i class="fa fa-times-circle" aria-hidden="true"></i></button></td>
 			    </tr>
 
 				<?php } ?>
@@ -133,6 +165,7 @@
  <script src="js/bootstrap.min.js"></script>
  <script type="text/javascript">
 
+	// ADD SCRIPTS
  	$(document).on('click','#addSliderBtn',function(e){
 
 		var data = new FormData( document.getElementById('addform'));
@@ -160,14 +193,15 @@
 		e.preventDefault();
 	});
 
- var sure =document.getElementById('delete');
- sure.onclick = function () {
-  	test = confirm('are you suer delete');
- 	if (test === true) {
- 		alert('deleted succssfuly');
- 	}
- }
 
+	// DELETE SCRIPTS
+
+	$(document).on('click','#delete-btn',function(e){
+
+		var id = $(this).data('id');
+
+		$('#delete_id').val(id);
+	});
 
 
 
