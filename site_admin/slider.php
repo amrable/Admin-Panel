@@ -34,15 +34,15 @@
 			        </button>
 			      </div>
 			      <div class="modal-body">
-			        <form id="addform" action="php_site/generl_input.php" method="POST" enctype="multipart/form-data">
+			        <form id="addform" action="php_site/generl_input.php" method="POST" enctype="multipart/form-data" >
 			          <div class="form-group">
-			            <input type="file" class="form-control  btn-warning"  name="img_slider">
+			            <input type="file" class="form-control  btn-warning"  name="add_new_img">
 			          </div>
 			          <div class="form-group">
-					    <input type="text" class="form-control" placeholder="heading"  name="heading_slider" aria-describedby="basic-addon1">
+					    <input type="text" class="form-control" placeholder="heading"  name="add_new_heading" aria-describedby="basic-addon1">
 			          </div>
 			          <div class="form-group">
-					    <input type="text" class="form-control" placeholder="pragraph"  name="pragraph_slider" aria-describedby="basic-addon1">
+					    <input type="text" class="form-control" placeholder="pragraph"  name="add_new_text" aria-describedby="basic-addon1">
 			          </div>
 			        </form>
 			      </div>
@@ -126,7 +126,7 @@
 		var data = new FormData( document.getElementById('addform'));
 
 		$.ajax({
-			url:"/sliders/add.php",
+			url:"sliders/add.php",
 			type: "POST",
 			data:data,
 			async: false,
@@ -136,7 +136,7 @@
 		.done(
 			function(data){
 				console.log(data);
-				if(data==="success"){
+				if(data==="Success"){
 					window.location.reload();
 				}else{
 					alert("Error has happened");
