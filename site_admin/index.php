@@ -48,7 +48,23 @@
 			var name = $('#username').val();
 			var password = $('#password').val();
 
-			alert(name+password);
+			$.ajax(
+				{
+					url: "login.php",
+					type: "POST",
+					data: {username: name , password: password },
+					success: function(data){
+						if(data==="success"){
+							alert("log in");
+						}else{
+							alert("try again");
+						}
+					}
+				}
+			)
+
+
+			e.preventDefault();
 		});
 
 	</script>
