@@ -74,12 +74,13 @@
 			        </button>
 			      </div>
 			      <div class="modal-body">
-			        <form action="php_site/generl_input.php" method="POST" enctype="multipart/form-data">
+			        <form id="editform" action="php_site/generl_input.php" method="POST" enctype="multipart/form-data">
 
 								<div class="" style="text-align: center;">
-									<img id="edit_image" style="width : 30%; border-radius:100px;" name="edit_image" src="" alt="">
+									<input type="hidden" name="old_img_name" id="old_img_name" value="">
+									<img id="edit_image"name="edit_image" style="width : 30%; border-radius:1000px;"  src="" alt="">
 								</div>
-								<input id="edit_id" name="edit_id" type="text" name="" value="">
+								<input id="edit_id" name="edit_id" type="hidden" name="" value="">
 			          <div class="form-group">
 			            <input type="file" class="form-control  btn-info"  name="edit_new_img">
 			          </div>
@@ -232,6 +233,9 @@
 				}
 			}
 		)
+
+		e.preventDefault();
+
 	});
 
 	//EDIT SCRIPTS
@@ -244,7 +248,9 @@
 		$('#edit_id').val(id);
 		$('#edit_header').val(title);
 		$('#edit_text').val(text);
-		$('#edit_image').val(img);
+		$('#old_img_name').val(img);
+
+
 
 		url="../course_site/images/slider/";
 		url+=img;
@@ -255,6 +261,30 @@
 
 
 	});
+
+	$(document).on('click','#editSlider',function(e){
+
+		var data = new FormData(document.getElementById('editform'));
+
+		$.ajax({
+			url:"sliders/edit.php",
+			type:"POST",
+			data: data,
+			async: false,
+			processData: false,
+			contentType: false,
+		})
+		.done(function(data){
+			 console.log(data);
+			 if (data=="success") {
+				 window.location.reload();
+			 }
+			 else{
+				 alert("LOL");
+
+				}
+		})
+	})
 
 
 
