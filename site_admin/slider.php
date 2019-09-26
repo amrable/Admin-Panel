@@ -75,16 +75,19 @@
 			      </div>
 			      <div class="modal-body">
 			        <form action="php_site/generl_input.php" method="POST" enctype="multipart/form-data">
-								<img id="edit_image" name="edit_image" src="" alt="">
+
+								<div class="" style="text-align: center;">
+									<img id="edit_image" style="width : 30%; border-radius:100px;" name="edit_image" src="" alt="">
+								</div>
 								<input id="edit_id" name="edit_id" type="text" name="" value="">
 			          <div class="form-group">
-			            <input type="file" class="form-control  btn-info"  name="edit_img">
+			            <input type="file" class="form-control  btn-info"  name="edit_new_img">
 			          </div>
 			          <div class="form-group">
-					    <input type="text" class="form-control" placeholder="heading"  name="edit_header" aria-describedby="basic-addon1">
+					    <input type="text" class="form-control" placeholder="heading" id="edit_header"   name="edit_header" aria-describedby="basic-addon1">
 			          </div>
 			          <div class="form-group">
-					    <input type="text" class="form-control" placeholder="pragraph"  name="edit_text" aria-describedby="basic-addon1">
+					    <input type="text" class="form-control" placeholder="pragraph"  id="edit_text" name="edit_text" aria-describedby="basic-addon1">
 			          </div>
 			        </form>
 			      </div>
@@ -151,7 +154,10 @@
 			      <td> <?php echo $value['title']  ?> </td>
 			      <td> <?php echo $value['description']  ?> </td>
 			      <td> <img src="../course_site/images/slider/<?php echo $value['img']  ?>"  width="70" height="70" alt="">  </td>
-				  	<td><button id="edit-btn"   type="button"class="btn btn-info" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"  class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+				  	<td><button id="edit-btn" data-img="<?php echo $value['img'] ; ?>"
+						 data-desc="<?php echo $value['description'] ; ?>" oninvalid=""
+						data-title="<?php echo $value['title'] ; ?>"
+						data-id="<?php echo $value['id'] ; ?>"    type="button"class="btn btn-info" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"  class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
 				  	<td><button id="delete-btn" data-id="<?php echo $value['id']; ?>" type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteslider" ><i class="fa fa-times-circle" aria-hidden="true"></i></button></td>
 			    </tr>
 
@@ -228,6 +234,27 @@
 		)
 	});
 
+	//EDIT SCRIPTS
+
+	$(document).on('click','#edit-btn',function(e){
+		var id = $(this).data('id');
+		var text = $(this).data('desc');
+		var img = $(this).data('img');
+		var title = $(this).data('title');
+		$('#edit_id').val(id);
+		$('#edit_header').val(title);
+		$('#edit_text').val(text);
+		$('#edit_image').val(img);
+
+		url="../course_site/images/slider/";
+		url+=img;
+
+
+
+		$('#edit_image').attr('src',url);
+
+
+	});
 
 
 
