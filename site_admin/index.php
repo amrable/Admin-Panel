@@ -30,14 +30,27 @@
 					<div class="form-group">
 						<input type="password" name="password" id="password" placeholder="password" class="form-control">
 					</div>
-					
+
 					<div class="form-group">
 						<input type="submit" id="login" class="form-control btn btn-info" value="Login Now">
 					</div>
-					
+
 				</form>
 			</div>
 		</div>
 	</header>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(document).on('click','#login',function(e){
+			var name = $('#username').val();
+			var password = $('#password').val();
+
+			alert(name+password);
+		});
+
+	</script>
 </body>
 </html>
