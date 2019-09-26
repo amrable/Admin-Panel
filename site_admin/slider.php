@@ -28,7 +28,7 @@
 	<!-- start table slider -->
 	<div class="container">
 		<div class="row">
-		<div class="form col-lg-10 col-md-offset-2 marg">
+		<div class="form col-lg-10  marg">
 			<button id="" type="button" class="btn btn-warning" data-toggle="modal" data-target="#addslider" data-whatever="@mdo">
 			Add To slider</button>
 			<div class="modal fade" id="addslider" tabindex="-1" role="dialog" aria-labelledby="addsliderLabel"
@@ -104,7 +104,7 @@
 
 
 		<!-- model Delete  -->
-		<div class="form col-lg-10 col-md-offset-2 ">
+		<div class="form col-lg-10  ">
 			<div class="modal fade" id="deleteslider" tabindex="-1" role="dialog" aria-labelledby="DeleteLabel" aria-hidden="true">
 			  <div class="modal-dialog" role="document">
 			    <div class="modal-content">
@@ -134,7 +134,7 @@
 		</div>
 		<!-- end modal Delete -->
 
-		<div class="col-lg-10 col-md-offset-2">
+		<div class=" ">
 			<table class="table ">
 			  <thead>
 			    <tr>
