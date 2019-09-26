@@ -75,20 +75,22 @@
 			      </div>
 			      <div class="modal-body">
 			        <form action="php_site/generl_input.php" method="POST" enctype="multipart/form-data">
+								<img id="edit_image" name="edit_image" src="" alt="">
+								<input id="edit_id" name="edit_id" type="text" name="" value="">
 			          <div class="form-group">
-			            <input type="file" class="form-control  btn-info"  name="img_slider">
+			            <input type="file" class="form-control  btn-info"  name="edit_img">
 			          </div>
 			          <div class="form-group">
-					    <input type="text" class="form-control" placeholder="heading"  name="heading_slider" aria-describedby="basic-addon1">
+					    <input type="text" class="form-control" placeholder="heading"  name="edit_header" aria-describedby="basic-addon1">
 			          </div>
 			          <div class="form-group">
-					    <input type="text" class="form-control" placeholder="pragraph"  name="pragraph_slider" aria-describedby="basic-addon1">
+					    <input type="text" class="form-control" placeholder="pragraph"  name="edit_text" aria-describedby="basic-addon1">
 			          </div>
 			        </form>
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			        <button type="submit" class="btn btn-primary"> Edit Slider </button>
+			        <button id="editSlider" type="submit" class="btn btn-primary"> Edit  </button>
 			      </div>
 			    </div>
 			  </div>
