@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +21,7 @@
 	<div class="container">
 		<div class="row">
 		<div class="form col-lg-10 col-md-offset-2 marg">
-			<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#addslider" data-whatever="@mdo">
+			<button id="" type="button" class="btn btn-warning" data-toggle="modal" data-target="#addslider" data-whatever="@mdo">
 			Add To slider</button>
 			<div class="modal fade" id="addslider" tabindex="-1" role="dialog" aria-labelledby="addsliderLabel"
 			 aria-hidden="true">
@@ -35,7 +34,7 @@
 			        </button>
 			      </div>
 			      <div class="modal-body">
-			        <form action="php_site/generl_input.php" method="POST" enctype="multipart/form-data">
+			        <form id="addform" action="php_site/generl_input.php" method="POST" enctype="multipart/form-data">
 			          <div class="form-group">
 			            <input type="file" class="form-control  btn-warning"  name="img_slider">
 			          </div>
@@ -49,12 +48,12 @@
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			        <button type="submit" class="btn btn-primary"> Add Slider </button>
+			        <button id="addSliderBtn" type="submit" class="btn btn-primary"> Add Slider </button>
 			      </div>
 			    </div>
 			  </div>
 			</div>
-		</div>	
+		</div>
 		<!-- model Edit  -->
 		<div class="form col-lg-10 col-md-offset-2 ">
 			<div class="modal fade" id="Edit" tabindex="-1" role="dialog" aria-labelledby="EditLabel" aria-hidden="true">
@@ -86,10 +85,10 @@
 			    </div>
 			  </div>
 			</div>
-		</div>	
+		</div>
 		<!-- end modal edit -->
-		
-		<div class="col-lg-10 col-md-offset-2">	
+
+		<div class="col-lg-10 col-md-offset-2">
 			<table class="table ">
 			  <thead>
 			    <tr>
@@ -102,7 +101,7 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			 
+
 			    <tr>
 			      <th scope="row"></th>
 			      <td></td>
@@ -111,50 +110,52 @@
 				  <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"  class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
 				  <td><button id="delete" class="btn btn-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></button></td>
 			    </tr>
-			
+
 			</table>
 		</div>
 	</div>
-</div>	
+</div>
 <!-- end table slider -->
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <script src="js/bootstrap.min.js"></script>
  <script type="text/javascript">
 
+ 	$(document).on('click','#addSliderBtn',function(e){
+
+		var data = new FormData( document.getElementById('addform'));
+
+		$.ajax({
+			url:"/sliders/add.php",
+			type: "POST",
+			data:data,
+			async: false,
+	    processData: false,
+	    contentType: false,
+		})
+		.done(
+			function(data){
+				console.log(data);
+				if(data==="success"){
+					window.location.reload();
+				}else{
+					alert("Error has happened");
+				}
+			}
+		)
+
+
+		e.preventDefault();
+	});
+
  var sure =document.getElementById('delete');
  sure.onclick = function () {
   	test = confirm('are you suer delete');
  	if (test === true) {
  		alert('deleted succssfuly');
- 	} 
+ 	}
  }
 
-
-$(document).on('click', '#submit', function(a){
-	var data = new FormData(document.getElementById('submit_id'));
-                   $.ajax({
-                            type: 'POST', 
-                            url: "slider_edit.php",
-                            data: data,
-                            async: false,
-                            processData: false,
-                            contentType: false,
-                       })
-                        .done(function (data) {
-                        	console.log(data);
-		if (data=="record update successfully") {
-			//window.location.assign("slider.php");
-		}
-		else{
-			alert("faild");
- 		
-		 }
-		 	
- });
-a.preventDefault();
-
-	});
 
 
 
