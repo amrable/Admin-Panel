@@ -1,3 +1,10 @@
+<?php
+
+require 'connect_database.php';
+$sql = "select * from skill";
+$skills=$conn->query($sql);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -220,19 +227,25 @@
 				  <thead>
 				    <tr>
 				      <th>ID</th>
-				      <th>title</th>
-				      <th>rate </th>
+				      <th>Name</th>
+				      <th>Rate </th>
 				       <th> Edit</th>
 				      <th>Delete</th>
 				    </tr>
 				  </thead>
 				  <tbody>
-				    <tr>
-				      <th scope="row">1</th>
-				      <td>Mark</td>
-				      <td>Mark</td>
-					   <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#editSkils" data-whatever="@mdo"  class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
-				  <td><button id="delete_skils" class="btn btn-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></button></td>
+							<?php foreach ($skills as $key => $value){ ?>
+								<tr>
+
+								<th scope="row"><?php echo $key+1;?></th>
+								<td><?php echo $value['name'];?></td>
+								<td><?php echo $value['skill_value'];?></td>
+								<td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#editSkils" data-whatever="@mdo"  class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+								<td><button id="delete_skils" class="btn btn-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></button></td>
+							</tr>
+
+							<?php } ?>
+
 				</table>
 			</div>
 		</div>
@@ -260,9 +273,10 @@
 					alert("Failed "+data);
 				}
 			}
-		)
+		);
+		e.preventDefault();
+		
 	});
-	e.preventDefault();
 
  //
  // var sure =document.getElementById('delete_about');
