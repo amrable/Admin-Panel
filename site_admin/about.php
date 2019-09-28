@@ -54,7 +54,7 @@
 			    </div>
 			  </div>
 			</div>
-		</div>	
+		</div>
 
 		<!-- model Edit about -->
 		<div class="form col-lg-10 col-md-offset-2 ">
@@ -90,11 +90,11 @@
 			    </div>
 			  </div>
 			</div>
-		</div>	
+		</div>
 		<!-- end  edit modal -->
 
 		<!-- show table about -->
-			<div class="col-lg-10 col-md-offset-2">	
+			<div class="col-lg-10 col-md-offset-2">
 				<table class="table ">
 				  <thead>
 				    <tr>
@@ -118,10 +118,28 @@
 				</table>
 			</div>
 		</div>
-	</div>	
+	</div>
 <!-- end show table about -->
 
 <!--  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- start  skllis -->
 	<div class="container">
@@ -132,30 +150,27 @@
 			  <div class="modal-dialog" role="document">
 			    <div class="modal-content">
 			      <div class="modal-header">
-			        <h5 class="modal-title" id="Edieskiles">New Sklis</h5>
+			        <h4 class="modal-title" id="Edieskiles">New Skill</h4>
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			          <span aria-hidden="true">&times;</span>
 			        </button>
 			      </div>
 			      <div class="modal-body">
-			        <form>
+			        <form id="addSkillForm">
+
 			          <div class="form-group">
-			            <label for="select" class="form-control-label">select img:</label>
-			            <input type="file" class="form-control  btn-warning " id="select">
+			            <label for="heading-text" class="form-control-label">Skill Name</label>
+					    		<input type="text" class="form-control" placeholder="title" id="addSkillName" name="addSkillName" aria-describedby="basic-addon1">
 			          </div>
 			          <div class="form-group">
-			            <label for="heading-text" class="form-control-label">title:</label>
-					    <input type="text" class="form-control" placeholder="title" id="heading-text" aria-describedby="basic-addon1">
-			          </div>
-			          <div class="form-group">
-			            <label for="pragraph-text" class="form-control-label">rate:</label>
-					    <input type="text" class="form-control" placeholder="rate" id="pragraph-text" aria-describedby="basic-addon1">
+			            <label for="pragraph-text" class="form-control-label">Skill Rate</label>
+					    		<input type="text" class="form-control" placeholder="rate" id="addSkillRate" name="addSkillRate" aria-describedby="basic-addon1">
 			          </div>
 			        </form>
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			        <button type="submit" class="btn btn-primary">Add Sklis </button>
+			        <button id="addSkillBtn" type="submit" class="btn btn-primary">Add</button>
 			      </div>
 			    </div>
 			  </div>
@@ -196,11 +211,11 @@
 			    </div>
 			  </div>
 			</div>
-		</div>	
+		</div>
 		<!-- end  edit modal -->
 
 		<!--  show table skils -->
-			<div class="col-lg-10 col-md-offset-2">	
+			<div class="col-lg-10 col-md-offset-2">
 				<table class="table ">
 				  <thead>
 				    <tr>
@@ -221,27 +236,50 @@
 				</table>
 			</div>
 		</div>
-	</div>	
+	</div>
 <!-- end table skllis -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript">
 
- var sure =document.getElementById('delete_about');
- sure.onclick = function () {
-  	test = confirm('are you suer delete about');
- 	if (test === true) {
- 		alert('deleted succssfuly');
- 	} 
- }
+	$(document).on('click','#addSkillBtn',function(e){
+		var data = new FormData(document.getElementById('addSkillForm'));
+		$.ajax({
+			url:'skills/add.php',
+			data:data,
+			type:"POST",
+			async: false,
+			processData: false,
+			contentType: false,
+		})
+		.done(
+			function(data){
+				if(data=="success"){
+					window.location.reload();
+				}else{
+					alert("Failed "+data);
+				}
+			}
+		)
+	});
+	e.preventDefault();
 
-  var sure =document.getElementById('delete_skils');
- sure.onclick = function () {
-  	test = confirm('are you suer delete skils');
- 	if (test === true) {
- 		alert('deleted succssfuly');
- 	} 
- }
+ //
+ // var sure =document.getElementById('delete_about');
+ // sure.onclick = function () {
+ //  	test = confirm('are you suer delete about');
+ // 	if (test === true) {
+ // 		alert('deleted succssfuly');
+ // 	}
+ // }
+ //
+ //  var sure =document.getElementById('delete_skils');
+ // sure.onclick = function () {
+ //  	test = confirm('are you suer delete skils');
+ // 	if (test === true) {
+ // 		alert('deleted succssfuly');
+ // 	}
+ // }
  </script>
 </body>
 </html>
