@@ -1,146 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-	<meta charset="utf-8"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Creative One Page Parallax Template">
-	<meta name="keywords" content="Creative, Onepage, Parallax, HTML5, Bootstrap, Popular, custom, personal, portfolio" /> 
-	<meta name="author" content=""> 
-	<title>HIMU - OnePage HTML Parallax template</title> 
+	<meta name="keywords" content="Creative, Onepage, Parallax, HTML5, Bootstrap, Popular, custom, personal, portfolio" />
+	<meta name="author" content="">
+	<title>HIMU - OnePage HTML Parallax template</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/prettyPhoto.css" rel="stylesheet"> 
-	<link href="css/font-awesome.min.css" rel="stylesheet"> 
-	<link href="css/animate.css" rel="stylesheet"> 
+	<link href="css/prettyPhoto.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet"> 
-	<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> 
-	<script src="js/respond.min.js"></script> <![endif]--> 
-	<link rel="shortcut icon" href="images/ico/favicon.png"> 
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png"> 
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png"> 
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png"> 
+	<link href="css/responsive.css" rel="stylesheet">
+	<!--[if lt IE 9]> <script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script> <![endif]-->
+	<link rel="shortcut icon" href="images/ico/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 <body>
 	<div class="preloader">
 		<div class="preloder-wrap">
-			<div class="preloder-inner"> 
-				<div class="ball"></div> 
-				<div class="ball"></div> 
-				<div class="ball"></div> 
-				<div class="ball"></div> 
-				<div class="ball"></div> 
-				<div class="ball"></div> 
+			<div class="preloder-inner">
+				<div class="ball"></div>
+				<div class="ball"></div>
+				<div class="ball"></div>
+				<div class="ball"></div>
+				<div class="ball"></div>
+				<div class="ball"></div>
 				<div class="ball"></div>
 			</div>
 		</div>
 	</div><!--/.preloader-->
-	<header id="navigation"> 
-		<div class="navbar navbar-inverse navbar-fixed-top" role="banner"> 
-			<div class="container"> 
-				<div class="navbar-header"> 
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
-						<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
-					</button> 
-					<a class="navbar-brand" href="index.html"><h1><img src="images/logo.png" alt="logo"></h1></a> 
-				</div> 
-				<div class="collapse navbar-collapse"> 
-					<ul class="nav navbar-nav navbar-right"> 
-						<li class="scroll active"><a href="#navigation">Home</a></li> 
-						<li class="scroll"><a href="#about-us">About Us</a></li> 
-						<li class="scroll"><a href="#services">Services</a></li> 
-						<li class="scroll"><a href="#our-team">Our Team</a></li> 
-						<li class="scroll"><a href="#portfolio">Portfolio</a></li> 
-						<li class="scroll"><a href="#clients">Clients</a></li> 
-						<li class="scroll"><a href="#blog">Blog</a></li> 
-						<li class="scroll"><a href="#contact">Contact</a></li> 
-					</ul> 
-				</div> 
-			</div> 
-		</div><!--/navbar--> 
-	</header> <!--/#navigation--> 
-
-<?php require('slider.php'); ?>
-
-<section id="about-us">
-	<div class="container">
-		<div class="text-center">
-			<div class="col-sm-8 col-sm-offset-2">
-				<h2 class="title-one">Why With Us?</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-			</div>
-		</div>
-		<div class="about-us">
-			<div class="row">
-				<div class="col-sm-6">
-					<h3>Why with us?</h3>
-					<ul class="nav nav-tabs">
-						<li class="active"><a href="#about" data-toggle="tab"><i class="fa fa-chain-broken"></i> About</a></li>
-						<li><a href="#mission" data-toggle="tab"><i class="fa fa-th-large"></i> Mission</a></li>
-						<li><a href="#community" data-toggle="tab"><i class="fa fa-users"></i> Community</a></li>
+	<header id="navigation">
+		<div class="navbar navbar-inverse navbar-fixed-top" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><h1><img src="images/logo.png" alt="logo"></h1></a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="scroll active"><a href="#navigation">Home</a></li>
+						<li class="scroll"><a href="#about-us">About Us</a></li>
+						<li class="scroll"><a href="#services">Services</a></li>
+						<li class="scroll"><a href="#our-team">Our Team</a></li>
+						<li class="scroll"><a href="#portfolio">Portfolio</a></li>
+						<li class="scroll"><a href="#clients">Clients</a></li>
+						<li class="scroll"><a href="#blog">Blog</a></li>
+						<li class="scroll"><a href="#contact">Contact</a></li>
 					</ul>
-					<div class="tab-content">
-						<div class="tab-pane fade in active" id="about">
-							<div class="media">
-								<img class="pull-left media-object" src="images/about-us/about.jpg" alt="about us"> 
-								<div class="media-body">
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="mission">
-							<div class="media">
-								<img class="pull-left media-object" src="images/about-us/mission.jpg" alt="Mission"> 
-								<div class="media-body">
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci </p>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="community">
-							<div class="media">
-								<img class="pull-left media-object" src="images/about-us/community.jpg" alt="Community"> 
-								<div class="media-body">
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<h3>Our Skills</h3>
-					<div class="skill-bar">
-						<div class="skillbar clearfix " data-percent="90%">
-							<div class="skillbar-title">
-								<span>HTML5 &amp; CSS3</span>
-							</div>
-							<div class="skillbar-bar"></div>
-							<div class="skill-bar-percent">90%</div>
-						</div> <!-- End Skill Bar -->
-						<div class="skillbar clearfix" data-percent="85%">
-							<div class="skillbar-title"><span>UI Design</span></div>
-							<div class="skillbar-bar"></div>
-							<div class="skill-bar-percent">85%</div>
-						</div> <!-- End Skill Bar -->
-						<div class="skillbar clearfix " data-percent="70%">
-							<div class="skillbar-title"><span>jQuery</span></div>
-							<div class="skillbar-bar"></div>
-							<div class="skill-bar-percent">70%</div>
-						</div> <!-- End Skill Bar -->
-						<div class="skillbar clearfix " data-percent="60%">
-							<div class="skillbar-title"><span>PHP</span></div>
-							<div class="skillbar-bar"></div>
-							<div class="skill-bar-percent">60%</div>
-						</div> <!-- End Skill Bar -->
-						<div class="skillbar clearfix " data-percent="75%">
-							<div class="skillbar-title"><span>Wordpress</span></div>
-							<div class="skillbar-bar"></div>
-							<div class="skill-bar-percent">75%</div>
-						</div> <!-- End Skill Bar --></div>
-					</div>
 				</div>
 			</div>
-		</div>
-	</section><!--/#about-us-->
+		</div><!--/navbar-->
+	</header> <!--/#navigation-->
+
+	<?php require('slider.php'); ?>
+	<?php require('about.php'); ?>
+
+
 
 	<section id="services" class="parallax-section">
 		<div class="container">
@@ -341,7 +264,7 @@
 					<div class="col-sm-3 col-xs-12 portfolio-item html">
 						<div class="view efffect">
 							<div class="portfolio-image">
-								<img src="images/portfolio/1.jpg" alt=""></div> 
+								<img src="images/portfolio/1.jpg" alt=""></div>
 								<div class="mask text-center">
 									<h3>Novel</h3>
 									<h4>Lorem ipsum dolor sit amet consectetur</h4>
@@ -354,7 +277,7 @@
 							<div class="view efffect" >
 								<div class="portfolio-image">
 									<img src="images/portfolio/2.jpg" alt="">
-								</div> 
+								</div>
 								<div class="mask text-center">
 									<h3>Novel</h3>
 									<h4>Lorem ipsum dolor sit amet consectetur</h4>
@@ -367,7 +290,7 @@
 							<div class="view efffect">
 								<div class="portfolio-image">
 									<img src="images/portfolio/3.jpg" alt="">
-								</div> 
+								</div>
 								<div class="mask text-center">
 								<h3>Novel</h3>
 								<h4>Lorem ipsum dolor sit amet consectetur</h4>
@@ -380,7 +303,7 @@
 						<div class="view efffect">
 							<div class="portfolio-image">
 								<img src="images/portfolio/4.jpg" alt="">
-							</div> 
+							</div>
 							<div class="mask text-center">
 								<h3>Novel</h3>
 								<h4>Lorem ipsum dolor sit amet consectetur</h4>
@@ -405,7 +328,7 @@
 					<div class="view efffect">
 						<div class="portfolio-image">
 							<img src="images/portfolio/6.jpg" alt="">
-						</div> 
+						</div>
 						<div class="mask text-center">
 							<h3>Novel</h3>
 							<h4>Lorem ipsum dolor sit amet consectetur</h4>
@@ -418,7 +341,7 @@
 					<div class="view efffect">
 						<div class="portfolio-image">
 							<img src="images/portfolio/7.jpg" alt="">
-						</div> 
+						</div>
 						<div class="mask text-center">
 							<h3>Novel</h3>
 							<h4>Lorem ipsum dolor sit amet consectetur</h4>
@@ -430,7 +353,7 @@
 				<div class="col-sm-3 col-xs-12 portfolio-item joomla">
 					<div class="view efffect">
 						<div class="portfolio-image">
-							<img src="images/portfolio/8.jpg" alt=""></div> 
+							<img src="images/portfolio/8.jpg" alt=""></div>
 							<div class="mask text-center">
 								<h3>Novel</h3>
 								<h4>Lorem ipsum dolor sit amet consectetur</h4>
@@ -443,7 +366,7 @@
 						<div class="view efffect">
 							<div class="portfolio-image">
 								<img src="images/portfolio/9.jpg" alt="">
-							</div> 
+							</div>
 							<div class="mask text-center">
 								<h3>Novel</h3>
 								<h4>Lorem ipsum dolor sit amet consectetur</h4>
@@ -455,7 +378,7 @@
 					<div class="col-sm-3 col-xs-12 portfolio-item wordpress">
 						<div class="view efffect">
 							<div class="portfolio-image">
-								<img src="images/portfolio/10.jpg" alt=""></div> 
+								<img src="images/portfolio/10.jpg" alt=""></div>
 								<div class="mask text-center">
 									<h3>Novel</h3>
 									<h4>Lorem ipsum dolor sit amet consectetur</h4>
@@ -467,7 +390,7 @@
 						<div class="col-sm-3 col-xs-12 portfolio-item joomla">
 							<div class="view efffect">
 								<div class="portfolio-image">
-									<img src="images/portfolio/11.jpg" alt=""></div> 
+									<img src="images/portfolio/11.jpg" alt=""></div>
 									<div class="mask text-center">
 										<h3>Novel</h3>
 										<h4>Lorem ipsum dolor sit amet consectetur</h4>
@@ -479,7 +402,7 @@
 							<div class="col-sm-3 col-xs-12 portfolio-item megento">
 								<div class="view efffect">
 									<div class="portfolio-image">
-										<img src="images/portfolio/12.jpg" alt=""></div> 
+										<img src="images/portfolio/12.jpg" alt=""></div>
 										<div class="mask text-center">
 											<h3>Novel</h3>
 											<h4>Lorem ipsum dolor sit amet consectetur</h4>
@@ -489,7 +412,7 @@
 									</div>
 								</div>
 							</div>
-						</div> 
+						</div>
 
 					</section> <!--/#portfolio-->
 
@@ -545,14 +468,14 @@
 						</div>
 					</section><!--/#clients-->
 
-					<section id="blog"> 
+					<section id="blog">
 						<div class="container">
 							<div class="row text-center clearfix">
 								<div class="col-sm-8 col-sm-offset-2">
 									<h2 class="title-one">Our Blog</h2>
 									<p class="blog-heading">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 								</div>
-							</div> 
+							</div>
 							<div class="row">
 								<div class="col-sm-4">
 									<div class="single-blog">
@@ -575,7 +498,7 @@
 													<img src="images/blog/3.jpg" alt="" />
 													<h2>Lorem ipsum dolor sit amet</h2>
 													<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-												</div> 
+												</div>
 											</div>
 										</div>
 									</div>
@@ -627,7 +550,7 @@
 													<img src="images/blog/3.jpg" alt="" />
 													<h2>Lorem ipsum dolor sit amet</h2>
 													<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-												</div> 
+												</div>
 											</div>
 										</div>
 									</div>
@@ -652,7 +575,7 @@
 														<img src="images/blog/3.jpg" alt="" />
 														<h2>Lorem ipsum dolor sit amet</h2>
 														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-													</div> 
+													</div>
 												</div>
 											</div>
 										</div>
@@ -678,7 +601,7 @@
 														<img src="images/blog/2.jpg" alt="" />
 														<h2>Lorem ipsum dolor sit amet</h2>
 														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-													</div> 
+													</div>
 												</div>
 											</div>
 										</div>
@@ -705,13 +628,13 @@
 														<img src="images/blog/1.jpg" alt="" />
 														<h2>Lorem ipsum dolor sit amet</h2>
 														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-													</div> 
+													</div>
 												</div>
 											</div>
 										</div>
-									</div> 
-								</div> 
-							</div> 
+									</div>
+								</div>
+							</div>
 						</section> <!--/#blog-->
 
 						<section id="contact">
@@ -738,7 +661,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-sm-6"> 
+										<div class="col-sm-6">
 											<div id="contact-form-section">
 												<div class="status alert alert-success" style="display: none"></div>
 												<form id="contact-form" class="contact" name="contact-form" method="post" action="#">
@@ -746,45 +669,45 @@
 														<input  id="name" type="text" name="name" class="form-control name-field" required="required" placeholder="Your Name"></div>
 														<div class="form-group">
 															<input id="email" type="email" name="email" class="form-control mail-field" required="required" placeholder="Your Email">
-														</div> 
+														</div>
 														<div class="form-group">
 															<textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
-														</div> 
+														</div>
 														<div class="form-group">
 															<button id="send_message" type="submit" class="btn btn-primary">Send</button>
 														</div>
-													</form> 
+													</form>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div> 
-							</section> <!--/#contact--> 
+								</div>
+							</section> <!--/#contact-->
 
-	<footer id="footer"> 
-		<div class="container"> 
-			<div class="text-center"> 
-				<p>Copyright &copy; 2014 - <a href="http://mostafiz.me/">Mostafiz</a> | All Rights Reserved</p> 
-			</div> 
-		</div> 
-	</footer> <!--/#footer--> 
+	<footer id="footer">
+		<div class="container">
+			<div class="text-center">
+				<p>Copyright &copy; 2014 - <a href="http://mostafiz.me/">Mostafiz</a> | All Rights Reserved</p>
+			</div>
+		</div>
+	</footer> <!--/#footer-->
 
-	<script type="text/javascript" src="js/jquery.js"></script> 
+	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/smoothscroll.js"></script> 
+	<script type="text/javascript" src="js/smoothscroll.js"></script>
 	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
-	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
-	<script type="text/javascript" src="js/jquery.parallax.js"></script> 
-	<script type="text/javascript" src="js/main.js"></script> 
+	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="js/jquery.parallax.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript">
-		
+
 		  $(document).on("click","#send_message", function (e) {
 		    var name =$('#name').val();
 		    var email =$('#email').val();
 		    var message =$('#message').val();
 
-		    $.ajax({ type: 'POST', 
+		    $.ajax({ type: 'POST',
                      url: "message.php",
                      data: {name :name ,email:email, message:message}
                   }).done(function (data) {
@@ -796,7 +719,7 @@
 
 
 // var data = {name:"name" ,email:"email", message:"message"};
-//        $.post("message.php",data,function(response){   
+//        $.post("message.php",data,function(response){
 // 		 	 // $('#result').html(data);
 // 		       alert(response);
 // 		 	});
@@ -811,9 +734,9 @@
 // // alert(password);
 
 // var data = {email:email,name:name};
-//        $.post("message.php",data,function(data){   
+//        $.post("message.php",data,function(data){
 // 			if(data=="true")
-// 			{ 
+// 			{
 // 			//window.location.href="";
 // 			alert("t");
 //             }
